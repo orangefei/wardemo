@@ -46,7 +46,7 @@ metadata:
     kubernets.io/ingress.class: "traefik"
 spec:
   rules:
-  - host: dockerapp.k8s.local
+  - host: {APP_NAME}-ci.k8s.local
     http:
       paths:
       - path: 
