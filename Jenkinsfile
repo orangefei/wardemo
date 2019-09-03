@@ -22,7 +22,7 @@ pipeline {
                 }
             }
             steps {
-                sh 'mvn clean package -Dfile.encoding=UTF-8 -DskipTests=true'
+                sh 'mvn clean -Dmaven.test.skip=true package -U -P ci'
                 stash includes: 'target/*.war', name: 'app'
             }
 
