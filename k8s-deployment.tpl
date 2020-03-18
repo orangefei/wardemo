@@ -2,7 +2,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: {APP_NAME}-service
-  namespace: uat
+  namespace: demo
 spec:
   selector:
     app: {APP_NAME}
@@ -15,7 +15,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: {APP_NAME}-deployment
-  namespace: uat
+  namespace: demo
   labels:
     app: {APP_NAME}
 spec:
@@ -41,7 +41,7 @@ apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
   name: {APP_NAME}
-  namespace: uat
+  namespace: demo
   annotations: 
     kubernets.io/ingress.class: "traefik"
 spec:
